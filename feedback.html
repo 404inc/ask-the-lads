@@ -5,16 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Feed Back</title>
+    <link rel="stylesheet" href="css/feedback.css">
+    <title>Feedback</title>
 </head>
 
 <body>
     <header>
-        <div id="logo">
-            <img src="https://via.placeholder.com/100x20" alt="">
-
-        </div>
+        
         <div class="wrapper">
             <div class="search-input">
                 <input type="text" name="searchBar" id="searchBar" placeholder="search">
@@ -22,115 +21,111 @@
             </div>
         </div>
 
-        <div id="sign-in">
-            <img src="https://icon-library.com/images/log-in-icon/log-in-icon-1.jpg" alt="" width="40" height="40">
-            <!-- <div id="user-info">
+        <div class="sign-in">
+            <a href="sign-in.html"><img src="/img/login.png" alt="" width="50px" height="50px"></a>
+            <!-- <div class="user-info">
                 <p>Hello there!</p>
             </div> -->
         </div>
-        <!-- Side Bar Section -->
-        <input type="checkbox" id="active">
-        <label for="active" class="menu-btn"><span></span></label>
-        <label for="active" class="close"></label>
-        <div class="Side-bar">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Feedback</a></li>
-            </ul>
+        
+        <!-- Side Bar -->
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Home</a>
+            <a href="#">Saved Items</a>
+            <a href="about-us.html">About Us</a>
+            <a href="#">Settings</a>
+            <a href="feedback.html">Send Feedback</a>
+          </div>
+          
+          <span class="menubtn" onclick="openNav()">&#9776;</span>
+        
+          <div class="logo">
+            <a href="index.html"><img src="https://via.placeholder.com/120x40" alt="logo"></a>
 
         </div>
-
-        <!-- <div id="switch">
-             <input type="checkbox" id="toggle" class="toggle--checkbox">
-             <label for="toggle" class="toggle--label">
-   <span class="toggle--label-background"></span>
- </label>
-             <div class="background"></div>
- 
-         </div> -->
     </header>
     <main>
-        <h2 id="title">FEED BACK FORM</h2>
-        <div class="container">
-            <form>
-                <div class="row">
-                    <div class="col-25">
-                        <label for="fname">First Name</label>
+        <div id="feedback">
+            <h2 id="title">Feedback Form</h2>
+            <div class="container">
+                <form>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="fname">First Name</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="fname" name="firstname" placeholder="Your first name..">
+                        </div>
                     </div>
-                    <div class="col-75">
-                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="lname">Last Name</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-25">
-                        <label for="lname">Last Name</label>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="email">E-mail</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="email" id="email" name="mailid" placeholder="Your E-mail..">
+                        </div>
                     </div>
-                    <div class="col-75">
-                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-25">
-                        <label for="email">Mail Id</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="email" id="email" name="mailid" placeholder="Your mail id..">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-25">
-                        <label for="Rating">Rating</label>
-                    </div>
-                    <div class="col-75">
-                        <select id="rate" name="rate">
-                            <option value="none">Select rate</option>
-                            <option value="good">Good</option>
-                            <option value="Average">Average</option>
-                            <option value="Bad">Bad</option>
-                            <option value="excellent">excellent</option>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="Rating">Rate your visit</label>
+                        </div>
+                        <div class="col-75">
+                            <select id="rate" name="rate">
+                                <option value="none">Select rate</option>
+                                <option value="good">Good</option>
+                                <option value="Average">Average</option>
+                                <option value="Bad">Bad</option>
+                                <option value="excellent">excellent</option>
 
-                        </select>
+                            </select>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-25">
-                        <label for="feed_back">Feed Back</label>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="feed_back">Feedback</label>
+                        </div>
+                        <div class="col-75">
+                            <textarea id="subject" name="subject" placeholder="Write something.."
+                                style="height:200px"></textarea>
+                        </div>
                     </div>
-                    <div class="col-75">
-                        <textarea id="subject" name="subject" placeholder="Write something.."
-                            style="height:200px"></textarea>
+                    <div class="row">
+                        <input type="submit" value="Submit">
                     </div>
-                </div>
-                <div class="row">
-                    <input type="submit" value="Submit">
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </main>
     <footer>
-        <div id="logo">
-            <img src="https://via.placeholder.com/100x20" alt="">
+        <div class="footer-logo">
+            <img class="footer-img" src="https://via.placeholder.com/210x70" alt="">
 
-            <section id="social-media">
+            <section class="social-media">
                 <div class="container text-center">
-                    <p>TAKE A LOOK INTO OUR SOCIAL MEDIA ACCOUNTS</p>
+                    <p>Contact Info</p>
                     <div class="social-icons">
-                        <a href="#"><img src="https://via.placeholder.com/30x30" </a>
-                            <a href="#"><img src="https://via.placeholder.com/30x30" </a>
-                                <a href="#"><img src="https://via.placeholder.com/30x30" </a>
-                                    <a href="#"><img src="https://via.placeholder.com/30x30" </a>
-                                        <a href="#"><img src="https://via.placeholder.com/30x30" </a>
-                                            <a href="#"><img src="https://via.placeholder.com/30x30" </a>
+                        <a href="#"><img src="https://via.placeholder.com/30x30"/> </a>
+                        <a href="#"><img src="https://via.placeholder.com/30x30"/> </a>
+                        <a href="#"><img src="https://via.placeholder.com/30x30"/> </a>
+                        <a href="#"><img src="https://via.placeholder.com/30x30"/> </a>
+                        <a href="#"><img src="https://via.placeholder.com/30x30"/> </a>
+                        <a href="#"><img src="https://via.placeholder.com/30x30"/> </a>
                     </div>
-
-
                 </div>
             </section>
+        </div>
     </footer>
-
+    <script src="js/app.js"></script>
 </body>
 
 </html>

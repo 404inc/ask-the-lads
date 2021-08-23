@@ -7,13 +7,11 @@
     <title>Sign in</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sign-in.css">
 </head>
 <body>
     <header>
-        <div id="logo">
-            <img src="https://via.placeholder.com/100x20" alt="">
-
-        </div>
+        
         <div class="wrapper">
             <div class="search-input">
                 <input type="text" name="searchBar" id="searchBar" placeholder="search">
@@ -21,106 +19,99 @@
             </div>
         </div>
 
-        <div id="sign-in">
-            <img src="https://icon-library.com/images/log-in-icon/log-in-icon-1.jpg" alt="" width="40" height="40">
-            <!-- <div id="user-info">
+        <div class="sign-in">
+            <a href="sign-in.html"><img src="/img/login.png" alt="" width="50px" height="50px"></a>
+            <!-- <div class="user-info">
                 <p>Hello there!</p>
             </div> -->
         </div>
-        <!-- Side Bar Section -->
-        <input type="checkbox" id="active">
-        <label for="active" class="menu-btn"><span></span></label>
-        <label for="active" class="close"></label>
-        <div class="Side-bar">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Feedback</a></li>
-            </ul>
+        
+        <!-- Side Bar -->
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Home</a>
+            <a href="#">Saved Items</a>
+            <a href="about-us.html">About Us</a>
+            <a href="#">Settings</a>
+            <a href="feedback.html">Send Feedback</a>
+          </div>
+          
+          <span class="menubtn" onclick="openNav()">&#9776;</span>
+        
+          <div class="logo">
+            <a href="index.html"><img src="https://via.placeholder.com/120x40" alt="logo"></a>
 
         </div>
-
-        <!-- <div id="switch">
-             <input type="checkbox" id="toggle" class="toggle--checkbox">
-             <label for="toggle" class="toggle--label">
-   <span class="toggle--label-background"></span>
- </label>
-             <div class="background"></div>
- 
-         </div> -->
     </header>
     <main>
-        <form id="signIn">
-            <div class="container">
-              <h2>Sign In</h2>
-              <p>Please type your info to log into your account.</p>
-              <hr>
-          
-              <label for="email"><b>Email</b></label>
-              <input type="text" placeholder="Enter Email" name="email" required>
-          
-              <label for="psw"><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" name="psw" required>
-              
-              <label>
-                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-              </label>
-              
-              <div class="clearfix">
-                <button id="signbtn" type="submit" class="signbtn">Sign In</button>
-              </div>
-            </div>
-          </form>
+        <div id="sign">
+            <form id="signIn-form">
+                <div class="sign-container">
+                <h2>Sign In</h2>
+                <p>Please type your info to log into your account.</p>
+                <hr>
+            
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+            
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                </label>
+                
+                <div class="clearfix">
+                    <button id="signbtn" type="submit" class="signbtn">Sign In</button>
+                </div>
+                </div>
+            </form>
 
-          <p id="signQuestion">Dont't have an account?</p>
+            <p id="signQuestion">Dont't have an account?</p>
 
-          <form id="signUp">
-            <div class="container">
-              <h2>Sign Up</h2>
-              <p>Please fill in this form to create an account.</p>
-              <hr>
-          
-              <label for="email"><b>Email</b></label>
-              <input type="text" placeholder="Enter Email" name="email" required>
-          
-              <label for="psw"><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" name="psw" required>
-          
-              <label for="psw-repeat"><b>Repeat Password</b></label>
-              <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-              
-              <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-          
-              <div class="clearfix">
-                <button id="signbtn" type="submit" class="signbtn">Sign Up</button>
-              </div>
-            </div>
-          </form>
+            <form id="signUp-form">
+                <div class="sign-container">
+                <h2>Sign Up</h2>
+                <p>Please fill in this form to create an account.</p>
+                <hr>
+            
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+            
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+            
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                
+                <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+            
+                <div class="clearfix">
+                    <button id="signbtn" type="submit" class="signbtn">Sign Up</button>
+                </div>
+                </div>
+            </form>
+        </div>
     </main>
     <footer>
-        <div id="logo">
-            <img src="https://via.placeholder.com/100x20" alt="">
+        <div class="footer-logo">
+            <img class="footer-img" src="https://via.placeholder.com/210x70" alt="">
 
-            <section id="social-media">
+            <section class="social-media">
                 <div class="container text-center">
-                    <p>TAKE A LOOK INTO OUR SOCIAL MEDIA ACCOUNTS</p>
+                    <p>Contact Info</p>
                     <div class="social-icons">
-                        <a href="#"><img src="https://via.placeholder.com/30x30" </a>
-                            <a href="#"><img src="https://via.placeholder.com/30x30" </a>
-                                <a href="#"><img src="https://via.placeholder.com/30x30" </a>
-                                    <a href="#"><img src="https://via.placeholder.com/30x30" </a>
-                                        <a href="#"><img src="https://via.placeholder.com/30x30" </a>
-                                            <a href="#"><img src="https://via.placeholder.com/30x30" </a>
+                        <a href="#"><img src="https://via.placeholder.com/30x30"/> </a>
+                        <a href="#"><img src="https://via.placeholder.com/30x30"/> </a>
+                        <a href="#"><img src="https://via.placeholder.com/30x30"/> </a>
+                        <a href="#"><img src="https://via.placeholder.com/30x30"/> </a>
+                        <a href="#"><img src="https://via.placeholder.com/30x30"/> </a>
+                        <a href="#"><img src="https://via.placeholder.com/30x30"/> </a>
                     </div>
-
-
                 </div>
             </section>
-
         </div>
-
     </footer>
     <script src="js/app.js"></script>
 </body>

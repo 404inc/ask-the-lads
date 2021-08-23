@@ -1,4 +1,9 @@
-#signIn, #signUp {
+#sign {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+#signUp-form, #signIn-form {
     background-color: white;
     width: 700px;
     margin: auto;
@@ -13,7 +18,7 @@
     padding: 20px 0px;
 }
 
-input[type=text], input[type=password] {
+#sign input[type=text], #sign input[type=password] {
     width: 638px;
     padding: 15px;
     margin: 5px 0px 22px 0px;
@@ -23,21 +28,21 @@ input[type=text], input[type=password] {
     background: #f1f1f1;
   }
 
-  input[type=text]:focus, input[type=password]:focus {
+#sign input[type=text]:focus, #sign input[type=password]:focus {
   background-color: #ddd;
   outline: none;
 }
 
-form hr {
+#sign hr {
     border: 1px solid #f1f1f1;
     margin-bottom: 25px;
 }
 
-.container {
+.sign-container {
     padding: 16px;
 }
 
-button {
+#sign button {
     background-color: #04AA6D;
     color: white;
     font-size: 20px;
@@ -49,7 +54,7 @@ button {
     opacity: 0.8;
 }
 
-button:hover {
+#sign button:hover {
     opacity:1;
 }
 
@@ -58,7 +63,7 @@ button:hover {
 }
   
 
-form h2 {
+#sign h2 {
     font-size: 35px;
     text-align: center;
     margin-bottom: 20px;
@@ -67,11 +72,11 @@ form h2 {
     background-color: lightgray;
 }
 
-form p {
+#sign form p {
     font-size: 20px;
 }
 
-label {
+#sign label {
 padding-left: 10px;
 font-size: 18px;
 }
