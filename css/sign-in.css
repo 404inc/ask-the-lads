@@ -18,7 +18,7 @@
     padding: 20px 0px;
 }
 
-#sign input[type=text], #sign input[type=password] {
+#sign input[type=text], #sign input[type=password], #sign input[type=email] {
     width: 638px;
     padding: 15px;
     margin: 5px 0px 22px 0px;
@@ -28,7 +28,7 @@
     background: #f1f1f1;
   }
 
-#sign input[type=text]:focus, #sign input[type=password]:focus {
+#sign input[type=text]:focus, #sign input[type=password]:focus, #sign input[type=email]:focus {
   background-color: #ddd;
   outline: none;
 }
