@@ -10,12 +10,14 @@
     <link rel="stylesheet" href="css/homePage.css">
     <link rel="stylesheet" href="css/h-categories.css">
 
+
+
     <title>Home Page</title>
 </head>
 
 <body>
     <header>
-        
+
         <div class="wrapper">
             <div class="search-input">
                 <input type="text" name="searchBar" id="searchBar" placeholder="search">
@@ -24,12 +26,12 @@
         </div>
 
         <div class="sign-in">
-            <a href="sign-in.html"><img src="/img/login.png" alt="" width="50px" height="50px"></a>
+            <a href="sign-in.html"><img src="./img/login.png" alt="" width="50px" height="50px"></a>
             <!-- <div class="user-info">
                 <p>Hello there!</p>
             </div> -->
         </div>
-        
+
         <!-- Side Bar -->
 
         <div id="mySidenav" class="sidenav">
@@ -39,21 +41,48 @@
             <a href="about-us.html">About Us</a>
             <a href="#">Settings</a>
             <a href="feedback.html">Send Feedback</a>
-          </div>
-          
-          <span class="menubtn" onclick="openNav()">&#9776;</span>
-        
-          <div class="logo">
+        </div>
+
+        <span class="menubtn" onclick="openNav()">&#9776;</span>
+
+        <div class="logo">
             <a href="index.html"><img src="https://via.placeholder.com/120x40" alt="logo"></a>
 
         </div>
     </header>
     <main>
-
+        <!-- Hero Slider -->
         <div class="hero">
-            <p>Latest Best Reviews</p>
-            <!-- <h1>Ask The<span>- 𝓛𝓐𝓓𝓢 -</span></h1> -->
+            <div class="slideshows">
+                <div class="slideshow slideshow--hero">
+                    <div class="slides">
+                        <div class="slide slide1"></div>
+                        <div class="slide slide2"></div>
+                        <div class="slide slide3"></div>
+                    </div>
+                </div>
+                <div class="slideshow slideshow--contrast slideshow--contrast--before">
+                    <div class="slides">
+                        <div class="slide slide1"></div>
+                        <div class="slide slide2"></div>
+                        <div class="slide slide3"></div>
+
+                    </div>
+                </div>
+                <div class="slideshow slideshow--contrast slideshow--contrast--after">
+                    <div class="slides">
+                        <div class="slide slide1"></div>
+                        <div class="slide slide2"></div>
+                        <div class="slide slide3"></div>
+
+                    </div>
+                </div>
+            </div>
         </div>
+
+
+
+
 
         <h3 class="category">Latest Games Reviews</h3>
         <div id="gamesRow" class="gamesRow"></div>
@@ -74,12 +103,11 @@
                 <div class="container text-center">
                     <p>Contact Info</p>
                     <div class="social-icons">
-                        <a href="#"><img src="https://via.placeholder.com/30x30"/> </a>
-                        <a href="#"><img src="https://via.placeholder.com/30x30"/> </a>
-                        <a href="#"><img src="https://via.placeholder.com/30x30"/> </a>
-                        <a href="#"><img src="https://via.placeholder.com/30x30"/> </a>
-                        <a href="#"><img src="https://via.placeholder.com/30x30"/> </a>
-                        <a href="#"><img src="https://via.placeholder.com/30x30"/> </a>
+                        <a href="#"><img src="img/facebook-icon.png" /> </a>
+                        <a href="#"><img src="img/instagram-icon.png" /> </a>
+                        <a href="#"><img src="img/linkedin-icon.png" /> </a>
+                        <a href="#"><img src="img/snapchat-icon.png" /> </a>
+                        <a href="#"><img src="img/whatsapp-icon.png" /> </a>
                     </div>
                 </div>
             </section>

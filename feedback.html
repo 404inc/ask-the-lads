@@ -13,7 +13,7 @@
 
 <body>
     <header>
-        
+
         <div class="wrapper">
             <div class="search-input">
                 <input type="text" name="searchBar" id="searchBar" placeholder="search">
@@ -22,12 +22,12 @@
         </div>
 
         <div class="sign-in">
-            <a href="sign-in.html"><img src="/img/login.png" alt="" width="50px" height="50px"></a>
+            <a href="sign-in.html"><img src="./img/login.png" alt="" width="50px" height="50px"></a>
             <!-- <div class="user-info">
                 <p>Hello there!</p>
             </div> -->
         </div>
-        
+
         <!-- Side Bar -->
 
         <div id="mySidenav" class="sidenav">
@@ -37,11 +37,11 @@
             <a href="about-us.html">About Us</a>
             <a href="#">Settings</a>
             <a href="feedback.html">Send Feedback</a>
-          </div>
-          
-          <span class="menubtn" onclick="openNav()">&#9776;</span>
-        
-          <div class="logo">
+        </div>
+
+        <span class="menubtn" onclick="openNav()">&#9776;</span>
+
+        <div class="logo">
             <a href="index.html"><img src="https://via.placeholder.com/120x40" alt="logo"></a>
 
         </div>
@@ -50,7 +50,7 @@
         <div id="feedback">
             <h2 id="title">Feedback Form</h2>
             <div class="container">
-                <form>
+                <form id="myForm">
                     <div class="row">
                         <div class="col-25">
                             <label for="fname">First Name</label>
@@ -95,8 +95,7 @@
                             <label for="feed_back">Feedback</label>
                         </div>
                         <div class="col-75">
-                            <textarea id="subject" name="subject" placeholder="Write something.."
-                                style="height:200px"></textarea>
+                            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
                         </div>
                     </div>
                     <div class="row">
@@ -114,18 +113,27 @@
                 <div class="container text-center">
                     <p>Contact Info</p>
                     <div class="social-icons">
-                        <a href="#"><img src="https://via.placeholder.com/30x30"/> </a>
-                        <a href="#"><img src="https://via.placeholder.com/30x30"/> </a>
-                        <a href="#"><img src="https://via.placeholder.com/30x30"/> </a>
-                        <a href="#"><img src="https://via.placeholder.com/30x30"/> </a>
-                        <a href="#"><img src="https://via.placeholder.com/30x30"/> </a>
-                        <a href="#"><img src="https://via.placeholder.com/30x30"/> </a>
+                        <a href="#"><img src="img/facebook-icon.png" /> </a>
+                        <a href="#"><img src="img/instagram-icon.png" /> </a>
+                        <a href="#"><img src="img/linkedin-icon.png" /> </a>
+                        <a href="#"><img src="img/snapchat-icon.png" /> </a>
+                        <a href="#"><img src="img/whatsapp-icon.png" /> </a>
                     </div>
                 </div>
             </section>
         </div>
     </footer>
     <script src="js/app.js"></script>
+    <script>
+        let feed = document.getElementById('myForm');
+        feed.addEventListener('submit',thanks);
+
+        function thanks(event){
+           
+            alert("Thank you for your response..");
+        }
+
+    </script>
 </body>
 
 </html>

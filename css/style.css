@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background-image: url(https://eskipaper.com/images/blur-background-1.jpg);
-    background-size:100%;
+    background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -81,22 +81,23 @@ a {
     margin-top: 10px;
 }
 
+
 /* Side Bar */
 
 .menubtn {
     color: white;
     font-size: 45px;
-    cursor:pointer;
+    cursor: pointer;
     float: left;
     margin-left: 30px;
     margin-top: 12px;
 }
-  
+
 .sidenav {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 10;
     top: 0;
     left: 0;
     background-color: #f1f1f1;
@@ -104,7 +105,7 @@ a {
     transition: 0.5s;
     padding-top: 60px;
 }
-  
+
 .sidenav a {
     padding: 8px 8px 60px 32px;
     text-decoration: none;
@@ -113,11 +114,11 @@ a {
     display: block;
     transition: 0.3s;
 }
-  
+
 .sidenav a:hover {
     color: #000;
 }
-  
+
 .sidenav .closebtn {
     position: absolute;
     top: 0;
@@ -125,6 +126,7 @@ a {
     font-size: 36px;
     margin-left: 50px;
 }
+
 
 /* Footer */
 
@@ -137,7 +139,7 @@ footer {
     padding-top: 10px;
     text-align: center;
 }
-  
+
 .social-media {
     padding: 5px 40px;
     text-align: center;
