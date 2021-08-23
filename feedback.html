@@ -50,7 +50,7 @@
         <div id="feedback">
             <h2 id="title">Feedback Form</h2>
             <div class="container">
-                <form>
+                <form id="myForm">
                     <div class="row">
                         <div class="col-25">
                             <label for="fname">First Name</label>
@@ -126,6 +126,16 @@
         </div>
     </footer>
     <script src="js/app.js"></script>
+    <script>
+        let feed = document.getElementById('myForm');
+        feed.addEventListener('submit',thanks);
+
+        function thanks(event){
+           
+            alert("Thank you for your response..");
+        }
+
+    </script>
 </body>
 
 </html>
