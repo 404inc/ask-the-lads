@@ -11,7 +11,7 @@ function Login(email, password) {
 
 let preUser = new Login('test@ask.com', '1234');
 
-function saveToLocalStorage() {
+function saveToLocalStoragelog() {
     let data = JSON.stringify(usersArray);
     localStorage.setItem('users', data);
 }
@@ -81,7 +81,7 @@ function sign(event) {
         if (password1 == password2) {
             password = password1;
             new Login(email, password);
-            saveToLocalStorage();
+            saveToLocalStoragelog();
             window.location.replace('index.html');
         }
         else {
