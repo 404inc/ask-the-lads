@@ -9,7 +9,7 @@ body {
 
 header {
     height: 70px;
-    background-color: black;
+    background-color: #25274D;
 }
 
 .wrapper {
@@ -66,7 +66,7 @@ header {
 
 a {
     text-decoration: none;
-    color: black;
+    color: rgb(34, 34, 34);
 }
 
 .logo {
@@ -85,7 +85,7 @@ a {
 /* Side Bar */
 
 .menubtn {
-    color: white;
+    color: #AAABB8;
     font-size: 45px;
     cursor: pointer;
     float: left;
@@ -100,7 +100,7 @@ a {
     z-index: 10;
     top: 0;
     left: 0;
-    background-color: #f1f1f1;
+    background-color: #464866;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -110,13 +110,13 @@ a {
     padding: 8px 8px 60px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: #2E9CCA;
     display: block;
     transition: 0.3s;
 }
 
 .sidenav a:hover {
-    color: #000;
+    color: #AAABB8;
 }
 
 .sidenav .closebtn {
@@ -132,7 +132,7 @@ a {
 
 footer {
     height: 120px;
-    background-color: black;
+    background-color: #25274D;
 }
 
 .footer-logo {
@@ -147,12 +147,13 @@ footer {
     margin-left: 500px;
     margin-top: 10px;
     border-radius: 10px;
-    background-color: white;
+    background-color: #AAABB8;
 }
 
 .social-media p {
     font-size: 24px;
     margin-bottom: 10px;
+    color: #464866;
 }
 
 .social-icons img {
