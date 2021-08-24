@@ -5,7 +5,7 @@ let tempArray = [];
 
 function readFromLocalStorage() 
 {
-    let stringObj = localStorage.getItem('load');
+    let stringObj = localStorage.getItem('load-saved');
     let normalObj = JSON.parse(stringObj);
 
     if (normalObj) 
@@ -56,14 +56,14 @@ function removeItem(id){
                     tempArray[i][3]--;
                 }
             }
-        console.log(tempArray);
-        saveToLocalStorage(tempArray);
+        // console.log(tempArray);
+        saveToLocalStorage(tempArray, 'load-saved');
         displayer();
     }
     else
     {
         tempArray.splice(id, 1);
-        saveToLocalStorage(tempArray);
+        saveToLocalStorage(tempArray, 'load-saved');
         displayer();
     }
 }
