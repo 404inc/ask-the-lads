@@ -44,13 +44,19 @@ function check(event) {
                 break;
             }
             else {
-                alert('Did you forgot your password?');
+                let password = document.getElementById('passwordLabel');
+                let email = document.getElementById('emailLabel');
+                email.textContent = '';
+                password.textContent = '* Did you forgot your password?';
                 break;
             }
         }
         else {
             if (i == usersArray.length - 1 && email != usersArray[i].email) {
-                alert('Email is not registered..');
+                let email = document.getElementById('emailLabel');
+                let password = document.getElementById('passwordLabel');
+                password.textContent = '';
+                email.textContent = '* Email is not registered!';
             }
         }
     }
@@ -72,7 +78,10 @@ function sign(event) {
 
     for (let i = 0; i < usersArray.length; i++) {
         if (email == usersArray[i].email) {
-            alert('This E-mail is already used..');
+            let passwordRepeat = document.getElementById('passwordRepeatLabel');
+            passwordRepeat.textContent = '';
+            let newEmail = document.getElementById('newEmailLabel');
+            newEmail.textContent = '* This E-mail is already used..';
             used = true;
             break;
         }
@@ -85,7 +94,10 @@ function sign(event) {
             window.location.replace('index.html');
         }
         else {
-            alert('Password is not same..');
+            let newEmail = document.getElementById('newEmailLabel');
+            newEmail.textContent = '';
+            let passwordRepeat = document.getElementById('passwordRepeatLabel');
+            passwordRepeat.textContent = '* Password is not same..';
         }
     }
 }

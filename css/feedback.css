@@ -1,66 +1,144 @@
-#title{
-  text-align: center;
-  font-size: 35px;
-  padding: 20px 0;
-  margin-top: 60px;
-}  
-
-#feedback {
-  margin-bottom: 60px;
+.background {
+  display: flex;
+  min-height: 80vh;
 }
-#feedback input[type=text], select, textarea {    
-width: 775px;    
-padding: 12px;    
-border: 1px solid rgb(70, 68, 68);    
-border-radius: 4px;    
-resize: vertical;    
-}    
-#feedback input[type=email], select, textarea {    
-width: 775px;    
-padding: 12px;    
-border: 1px solid rgb(70, 68, 68);    
-border-radius: 4px;    
-resize: vertical;    
-}    
-
-#feedback label {   
-width: 775px; 
-padding: 12px 12px 12px 0;    
-display: inline-block;    
-}    
-
-#feedback input[type=submit] {    
-background-color: rgb(37, 116, 161);    
-color: white;    
-padding: 12px 20px;    
-border: none;    
-border-radius: 4px;    
-cursor: pointer;    
-float: right;
-margin-top: 10px;
-}    
-
-#feedback input[type=submit]:hover {    
-background-color: #45a049;    
-}    
-
-#feedback .container { 
-width: 800px;   
-margin: 0 auto;
-border-radius: 5px;    
-background-color: #f2f2f2;    
-padding: 20px;    
-}    
-
-#feedback .col-25 {        
-width: 25%;    
-margin-top: 6px;  
-padding-left: 10px;
-
-}       
-
-#feedback .row:after {    
-content: "";    
-display: table;    
-clear: both;    
+ 
+.container {
+  margin: auto;
+}
+ 
+.screen {
+  position: relative;
+  color: white;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  width: 1000px;
+}
+ 
+.screen:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+  z-index: -1;
+}
+ 
+.screen-body {
+  display: flex;
+}
+ 
+.screen-body-item {
+  flex: 1;
+  padding: 50px;
+}
+ 
+.screen-body-item.left {
+  display: flex;
+  flex-direction: column;
+  background-color: #29648a;
+  border-radius: 15px 0 0 15px;
+}
+ 
+.app-title {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-size: 40px;
+}
+ 
+.app-title:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 25px;
+  height: 4px;
+  background: white;
+}
+ 
+.formLogo img {
+  margin: 150px 0 0 -15px;
+  width: 180px;
+  height: 60px;
+}
+ 
+.app-form-group {
+  margin-bottom: 15px;
+}
+ 
+.app-form-group.message {
+  margin-top: 40px;
+}
+ 
+.app-form-group.buttons {
+  margin-bottom: 0;
+  text-align: right;
+}
+ 
+.app-form-control {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  width: 100%;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #AAABB8;
+  color: #000;
+  font-size: 18px;
+  outline: none;
+  transition: border-color .2s;
+}
+ 
+.app-form-control::placeholder {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #AAABB8;
+}
+ 
+label {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #AAABB8;
+}
+ 
+.app-form-control:focus {
+  border-bottom-color: #000;
+}
+ 
+.app-form-button {
+  border-radius: 20px;
+  border: 1px solid #29648a;
+  background-color: #29648a;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 4px;
+}
+ 
+.app-form-button:hover {
+  border: 1px solid #2E9CCA;
+  background-color: #2E9CCA;
+   transition: 250ms ease-in;
+}
+ 
+.box select {
+  color: #000;
+}
+ 
+.box select option {
+  background-color: #ddd;
+  color: #000;
+}
+ 
+#app-message {
+  color: white;
+  font-size: 30px;
+  margin-top: 150px;
 }

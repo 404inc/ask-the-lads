@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url(https://eskipaper.com/images/blur-background-1.jpg);
+    background-color: #DEF2F1;
     background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -110,13 +110,13 @@ a {
     padding: 8px 8px 60px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #2E9CCA;
+    color: #AAABB8;
     display: block;
     transition: 0.3s;
 }
 
 .sidenav a:hover {
-    color: #AAABB8;
+    color: #2E9CCA;
 }
 
 .sidenav .closebtn {
