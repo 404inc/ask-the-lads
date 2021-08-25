@@ -74,8 +74,7 @@ a {
 
 .logo {
     display: inline-block;
-    margin-top: 13px;
-    margin-left: 100px;
+    margin-left: 70px;
 }
 
 .sign-in {
@@ -174,7 +173,7 @@ a {
     line-height: 69px;
     text-align: center;
     background: #46344e;
-    font-size: 25px;
+    font-size: 35px;
     font-weight: 600;
     color: white;
     border-bottom: 1px solid #222;
@@ -210,7 +209,7 @@ a {
 #sidebar .list-items li a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 500;
     height: 100%;
     width: 100%;
@@ -262,14 +261,6 @@ footer {
     transition: all 0.3s ease 0s;
 }
 
-@media only screen and (max-width: 480px) {
-    .social ul li {
-        border-width: 4px;
-        width: 45px;
-        height: 45px;
-    }
-}
-
 .social ul li:not(:last-child) {
     margin-right: 10px;
 }
@@ -277,7 +268,6 @@ footer {
 .social ul li:before {
     content: '';
     border-radius: 50%;
-    shadow: inset 0 0px 3px rgba(149, 90, 42, 0.28), 0px 0px 0px 2px rgba(149, 90, 42, 0.28);
     box-shadow: inset 0 0px 3px rgba(149, 90, 42, 0.28), 0px 0px 0px 2px rgba(149, 90, 42, 0.28);
     display: block;
     position: absolute;
@@ -289,13 +279,6 @@ footer {
     opacity: 0.35;
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
-}
-
-@media only screen and (max-width: 480px) {
-    .social ul li:before {
-        width: 43px;
-        height: 43px;
-    }
 }
 
 .social ul li:hover {
@@ -325,17 +308,6 @@ footer {
     line-height: 60px;
 }
 
-@media only screen and (max-width: 480px) {
-    .social ul li a {
-        background-size: cover;
-        top: -5px;
-        left: -5px;
-        width: 45px;
-        height: 45px;
-        line-height: 45px;
-    }
-}
-
 .social ul li a:before {
     content: '';
     background-image: url('https://img.picload.org/image/dcocwcga/border-social-hover.png');
@@ -350,14 +322,6 @@ footer {
     z-index: -1;
     opacity: 0;
     transition: all 0.3s ease 0s;
-}
-
-@media only screen and (max-width: 480px) {
-    .social ul li a:before {
-        background-size: cover;
-        width: 30px;
-        height: 30px;
-    }
 }
 
 .social ul li a:after {
@@ -375,13 +339,6 @@ footer {
     transition: all 0.3s ease 0s;
 }
 
-@media only screen and (max-width: 480px) {
-    .social ul li a:after {
-        background-size: cover;
-        width: 30px;
-        height: 30px;
-    }
-}
 
 .social ul li a:hover:before {
     opacity: 1;
@@ -405,12 +362,6 @@ footer {
     transform: translate(-50%, -50%);
     text-shadow: 1px 0px 20px #ffead3;
     transition: all 0.3s ease 0s;
-}
-
-@media only screen and (max-width: 480px) {
-    .social ul li a i {
-        font-size: 16px;
-    }
 }
 
 .social ul li a i.fa-envelope {
@@ -446,5 +397,5 @@ footer {
 }
 
 .footer-img {
-    margin: 25px 0 0 15px;
+    margin: 25px 0 0 55px;
 }

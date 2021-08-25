@@ -48,7 +48,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  font-size: 40px;
+  font-size: 50px;
 }
  
 .app-title:after {
@@ -89,7 +89,7 @@
   border: none;
   border-bottom: 1px solid #AAABB8;
   color: #000;
-  font-size: 18px;
+  font-size: 24px;
   outline: none;
   transition: border-color .2s;
 }
@@ -100,6 +100,7 @@
  
 label {
   color: #AAABB8;
+  font-size: 28px;
 }
  
 .app-form-control:focus {
@@ -111,7 +112,7 @@ label {
   border: 1px solid #5a5560;
   background-color: #5a5560;
   color: #FFFFFF;
-  font-size: 12px;
+  font-size: 24px;
   font-weight: bold;
   padding: 12px 45px;
   letter-spacing: 1px;
@@ -137,6 +138,6 @@ label {
  
 #app-message {
   color: white;
-  font-size: 30px;
+  font-size: 40px;
   margin-top: 150px;
 }
