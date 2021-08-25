@@ -16,129 +16,152 @@
 </head>
 
 <body>
-  <header>
+    <header>
 
-    <div class="wrapper">
-        <div class="search-input">
-            <input type="text" name="searchBar" id="searchBar" placeholder="search">
-            <div id="list" class="listC"></div>
+        <div class="wrapper">
+            <div class="search-input">
+                <input type="text" name="searchBar" id="searchBar" placeholder="search">
+                <div id="list" class="listC"></div>
+            </div>
         </div>
-    </div>
-    
-    <div class="sign-in">
-        <a href="sign-in.html"><img src="./img/login.png" alt="" width="40px" height="37px"></a>
-        <!-- <div class="user-info">
+
+        <div class="sign-in">
+            <a href="sign-in.html"><img src="./img/login.png" alt="" width="40px" height="37px"></a>
+            <!-- <div class="user-info">
             <p>Hello there!</p>
         </div> -->
-    </div>
+        </div>
 
-    <!-- Side Bar -->
+        <!-- Side Bar -->
 
-    <div class="wrapper1">
-        <input type="checkbox" id="btn" hidden>
-        <label for="btn" class="menu-btn">
+        <div class="wrapper1">
+            <input type="checkbox" id="btn" hidden>
+            <label for="btn" class="menu-btn">
          <i class="fas fa-bars"></i>
          <i class="fas fa-times"></i>
          </label>
-        <nav id="sidebar">
-            <div class="title">
-                Menu
+            <nav id="sidebar">
+                <div class="title">
+                    Menu
+                </div>
+                <ul class="list-items">
+                    <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+                    <li><a href="saved.html"><i class="fas fa-bookmark"></i>Saved Items</a></li>
+                    <li><a href="feedback.html"><i class="fas fa-comments"></i></i>Send Feedback</a></li>
+                    <li><a href="about-us.html"><i class="fas fa-receipt"></i>About Us</a></li>
+                </ul>
+            </nav>
+            <div class="logo">
+                <a href="index.html"><img src="./img/logo.png" alt="logo" width="210px" height="70px"></a>
+
             </div>
-            <ul class="list-items">
-                <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
-                <li><a href="saved.html"><i class="fas fa-bookmark"></i>Saved Items</a></li>
-                <li><a href="feedback.html"><i class="fas fa-comments"></i></i>Send Feedback</a></li>
-                <li><a href="about-us.html"><i class="fas fa-receipt"></i>About Us</a></li>
-            </ul>
-        </nav>
-        <div class="logo">
-            <a href="index.html"><img src="https://via.placeholder.com/120x40" alt="logo"></a>
-
         </div>
-    </div>
 
-    
-</header>
+
+    </header>
     <main>
 
         <div class="background">
             <div class="container">
-              <div class="screen">
-                <div class="screen-body">
-                  <div class="screen-body-item left">
-                    <div class="app-title">
-                      <span>Feedback</span>
-                    </div>
+                <div class="screen">
+                    <div class="screen-body">
+                        <div class="screen-body-item left">
+                            <div class="app-title">
+                                <span>Feedback</span>
+                            </div>
 
-                    <div id="app-message"></div>
-                    <div class="formLogo">
-                        <p>ASK THE LADS</p>
-                    </div>
-                  </div>
-                  <div class="screen-body-item">
-                    <form id="myForm" autocomplete="off">
-                      <div class="app-form-group">
-                        <input class="app-form-control" placeholder="FIRST NAME" required>
-                      </div>
-                      <div class="app-form-group">
-                        <input class="app-form-control" placeholder="LAST NAME" required>
-                      </div>
-                      <div class="app-form-group">
-                        <input class="app-form-control" placeholder="EMAIL" required>
-                      </div>
-                      <div class="app-form-group box">
-                        <label for="select">RATE YOUR VISIT</label>
-                        <select id="select" class="app-form-control" required>
+                            <div id="app-message"></div>
+                            <div class="formLogo">
+                                <p>ASK THE LADS</p>
+                            </div>
+                        </div>
+                        <div class="screen-body-item">
+                            <form id="myForm" autocomplete="off">
+                                <div class="app-form-group">
+                                    <input class="app-form-control" placeholder="FIRST NAME" required>
+                                </div>
+                                <div class="app-form-group">
+                                    <input class="app-form-control" placeholder="LAST NAME" required>
+                                </div>
+                                <div class="app-form-group">
+                                    <input class="app-form-control" placeholder="EMAIL" required>
+                                </div>
+                                <div class="app-form-group box">
+                                    <label for="select">RATE YOUR VISIT</label>
+                                    <select id="select" class="app-form-control" required>
                             <option value="none"></option>
                             <option value="good">Good</option>
                             <option value="Average">Average</option>
                             <option value="Bad">Bad</option>
                             <option value="excellent">excellent</option>
                         </select>
-                      </div>
-                      <div class="app-form-group message">
-                        <textarea class="app-form-control" placeholder="FEEDBACK" style="height:60px" required></textarea>
-                      </div>
-                      <div class="app-form-group buttons">
-                        <button class="app-form-button">SEND</button>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-    </main>
-    <footer>
-        <div class="footer-logo">
-            <img class="footer-img" src="https://via.placeholder.com/210x70" alt="">
-
-            <section class="social-media">
-                <div class="container text-center">
-                    <p>Contact Us</p>
-                    <div class="social-icons">
-                        <a href="#"><img src="img/facebook-icon.png" /> </a>
-                        <a href="#"><img src="img/instagram-icon.png" /> </a>
-                        <a href="#"><img src="img/linkedin-icon.png" /> </a>
-                        <a href="#"><img src="img/snapchat-icon.png" /> </a>
-                        <a href="#"><img src="img/whatsapp-icon.png" /> </a>
+                                </div>
+                                <div class="app-form-group message">
+                                    <textarea class="app-form-control" placeholder="FEEDBACK" style="height:60px" required></textarea>
+                                </div>
+                                <div class="app-form-group buttons">
+                                    <button class="app-form-button">SEND</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <img class="footer-img" src="./img/logo.png" alt="logo" width="210px" height="70px">
+        <div class="basr-social-share social">
+            <ul class="">
+                <li>
+                    <a class="facebook" href="">
+                        <i class="fab fa-facebook-f"></i>
+                        <span>Facebook</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="twitter" href="">
+                        <i class="fab fa-twitter"></i>
+                        <span>Twitter</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="googleplus" href="">
+                        <i class="fab fa-google-plus-g"></i>
+                        <span>Google Plus</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="linkedin" href="">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span>Linkedin</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="Youtube" href="">
+                        <i class="fab fa-youtube"></i>
+                        <span>Tumblr</span>
+                    </a>
+                </li>
+
+            </ul>
         </div>
     </footer>
     <script src="js/app.js"></script>
     <script>
         let feed = document.getElementById('myForm');
-        feed.addEventListener('submit',thanks);
+        feed.addEventListener('submit', thanks);
 
-        function thanks(event){
+        function thanks(event) {
             event.preventDefault();
             let message = document.getElementById('app-message');
             document.getElementById('myForm').reset();
             message.textContent = 'Thank you for your response ^_^';
         }
-
     </script>
 </body>
 

@@ -33,7 +33,7 @@ function displayer()
 
         let delButton = document.createElement('button');
         delButton.setAttribute('class', 'delButtonJs');
-        delButton.textContent = 'delete';
+        delButton.textContent = 'X';
 
         delButton.setAttribute('onclick', `removeItem(${i})`);
 
