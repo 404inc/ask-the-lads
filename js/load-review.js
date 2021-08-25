@@ -36,32 +36,39 @@ readFromCommentLocalStorage();
 
 function displayer()
 {
-    let imgEl = document.createElement('img');
-    imgEl.setAttribute('class', 'review-img');
-    imgEl.setAttribute('src', tempArray.oImage);
-    imgEl.setAttribute('alt', 'Review image');
-    reviewImg.appendChild(imgEl);
+    let imgCover = document.getElementById('cover');
+    imgCover.src = tempArray.oImage;
+    let imgClass = document.getElementById('hero');
 
-    let h3TitleEl = document.createElement('h3');
-    h3TitleEl.textContent = tempArray.oName;
+    document.documentElement.style.setProperty('--h', `url('${tempArray.oHero}')`); 
 
-    let pDisEl = document.createElement('p');
-    pDisEl.textContent = tempArray.oDis;
+    let likes = document.getElementById('likes');
+    likes.textContent = `${getRandomInt()} Likes`;
 
-    let submit = document.createElement('input');
-    submit.setAttribute('type', 'submit');
-    submit.setAttribute('name', 'submitF');
-    submit.setAttribute('id', 'submitF');
-    submit.setAttribute('class', 'submitF');
+    let titleEl = document.getElementById('title1');
+    titleEl.textContent = tempArray.oName;
 
-    inputForm.appendChild(submit);
+    let column2 = document.getElementById('column2');
+    let disEl = document.createElement('p');
+    disEl.textContent = tempArray.oDis;
+    column2.appendChild(disEl);
 
-    reviewInfo.appendChild(h3TitleEl);
-    reviewInfo.appendChild(pDisEl);
+    let trailerButton = document.createElement('img');
+    trailerButton.setAttribute('src', './img/playButton.png');
+    trailerButton.setAttribute('class', 'coverPlay');
+    trailerButton.setAttribute('onclick', 'goToTrailer()');
+    column2.appendChild(trailerButton);
+
+    inputForm.addEventListener('submit', comment);
 }
 displayer();
 
-inputForm.addEventListener('submit', comment);
+function goToTrailer(){
+    console.log(tempArray.trailer);
+    window.open(tempArray.trailer, '_blank');
+}
+
+// inputForm.addEventListener('submit', comment);
 
 function comment(event)
 {
@@ -71,6 +78,7 @@ function comment(event)
     let pEl = document.createElement('p');
     pEl.textContent = text;
     commentsField.appendChild(pEl);
+    inputForm.reset();
     saveToLocalStorage(comments, 'load-comment');
 }
 

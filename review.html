@@ -23,7 +23,7 @@
                 <div id="list" class="listC"></div>
             </div>
         </div>
-        
+
         <div class="sign-in">
             <a href="sign-in.html"><img src="./img/logo.png" alt="logo" width="210px" height="70px"></a>
             <!-- <div class="user-info">
@@ -36,9 +36,9 @@
         <div class="wrapper1">
             <input type="checkbox" id="btn" hidden>
             <label for="btn" class="menu-btn">
-             <i class="fas fa-bars"></i>
-             <i class="fas fa-times"></i>
-             </label>
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
+            </label>
             <nav id="sidebar">
                 <div class="title">
                     Menu
@@ -51,28 +51,71 @@
                 </ul>
             </nav>
             <div class="logo">
+                
                 <a href="index.html"><img src="./img/logo.png" alt="logo" width="210px" height="70px"></a>
     
             </div>
         </div>
 
-        
+
     </header>
     <main>
-        <div id="review-info-img" class="review-info-img"></div>
-        <div class="vl"></div>
-        <div class="rightContainer">
-            <div id="review-info-dis" class="review-info-dis"></div>
-            <div class="commentsContainer">
-                <div id="textDiv" class="textDiv">
-                    <div id="commentsField" class="commentsField"></div>
-                    <form id="inputForm" class="inputForm">
-                        <textarea name="textareaEl" id="textareaEl" class="textareaEl" cols="50" rows="4" placeholder="Comment..."></textarea>
-                    </form>
+        <div class="movie-card">
+
+            <div class="containerLoad">
+
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/hobbit_cover.jpg" alt="cover"
+                        class="cover" id="cover" />
+
+                <div class="hero" id="hero">
+
+                    <div class="details">
+
+                        <div class="title1" id="title1"></div>
+
+                        <!-- <div class="title2">The Battle of the Five Armies</div>     -->
+
+                        <fieldset class="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </fieldset>
+
+                        <span class="likes" id="likes">109 likes</span>
+
+                    </div> <!-- end details -->
+
+                </div> <!-- end hero -->
+
+                <div class="description">
+
+                    <div class="commentsField" id="commentsField">
+                        <h3>Comments:</h3>
+                        <hr>
+                    </div>
+                    <!-- <div class="column1">
+                  <span class="tag">action</span>
+                  <span class="tag">fantasy</span>
+                  <span class="tag">adventure</span>
+                </div> end column1 -->
+
+                    <div class="column2" , id="column2"></div>
+                    <!-- end column2 -->
+
+                </div> <!-- end description -->
+
+                <form action="" id="inputForm" class="inputForm">
+                    <textarea name="textareaEl" id="textareaEl" class="textareaEl" cols="30" rows="10"
+                        placeholder="Comment..."></textarea><br>
+                    <input type="submit" name="submit" id="submit">
+                </form>
+                
+
                 </div>
-            </div>
-        </div>
-        
+            </div> <!-- end container -->
+        </div> <!-- end movie-card -->
     </main>
     <footer>
         <div class="footer-logo">

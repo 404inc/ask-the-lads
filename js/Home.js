@@ -17,65 +17,7 @@ function readFromLocalStorage() {
 
 }
 readFromLocalStorage();
-// function imagesDisplay(category, arrayName, containerName, array) {
-//     let column = document.createElement('div');
-//     column.setAttribute('id', 'column');
-//     column.setAttribute('class', 'column');
-//     containerName.appendChild(column);
 
-//     for (let i = 0; i < array.length; i++) {
-//         let imageContainer = document.createElement('div');
-//         imageContainer.setAttribute('id', 'imageContainer');
-//         imageContainer.setAttribute('class', 'imageContainer');
-
-//         let imageEl = document.createElement('img');
-//         imageEl.setAttribute('src', array[i].oImage);
-//         imageEl.setAttribute('alt', 'placeHolder');
-//         imageEl.setAttribute('class', 'imgJs');
-//         imageEl.setAttribute('onclick', `goToPage(${arrayName}, ${i})`);
-
-//         let titleEl = document.createElement('h4');
-//         titleEl.setAttribute('class', 'h4Js');
-//         titleEl.textContent = 'Title';
-
-//         let disEl = document.createElement('p');
-//         disEl.setAttribute('class', 'pJs');
-//         disEl.textContent = 'This is the description of the product';
-//         let saveImg = document.createElement('img');
-//         if(i < savedIDs.length){
-//             if(i === savedIDs[i][0] && category === savedIDs[i][1])
-//             {
-//                 saveImg.setAttribute('src', 'https://www.freeiconspng.com/thumbs/check-tick-icon/tick-mark-icon-png-7.png');
-//             }
-//             else
-//             {
-//                 saveImg.setAttribute('src', 'https://static.thenounproject.com/png/3162217-200.png');
-//             }
-//         }
-//         else
-//         {
-//             saveImg.setAttribute('src', 'https://static.thenounproject.com/png/3162217-200.png');
-//         }
-//         saveImg.setAttribute('class', 'saveButtonJs');
-//         saveImg.setAttribute('id', `saveButtonJs${i}${category}`)
-
-//         let saveButton = document.createElement('button');
-//         saveButton.setAttribute('class', 'saveButtonJs');
-//         saveButton.setAttribute('onclick', `addToSaved(${arrayName}, ${i}, document.getElementById('saveButtonJs${i}${category}'))`);
-
-//         // let pAlert = document.createElement('p');
-//         // pAlert.setAttribute('class', 'saveAlert');
-//         // pAlert.textContent = 'Save Review';
-
-//         imageContainer.appendChild(imageEl);
-//         imageContainer.appendChild(titleEl);
-//         imageContainer.appendChild(disEl);
-//         imageContainer.appendChild(saveImg);
-//         imageContainer.appendChild(saveButton);
-//         // imageContainer.appendChild(pAlert);
-//         column.appendChild(imageContainer);
-//     }
-// }
 function imagesDisplay(category, arrayName, containerName, array) {
     let divSwiperContainer = document.createElement('div');
     divSwiperContainer.setAttribute('class', 'swiper-container');
@@ -94,28 +36,43 @@ function imagesDisplay(category, arrayName, containerName, array) {
         imgItem.setAttribute('alt', array[i].oName);
         imgItem.setAttribute('onclick', `goToPage(${arrayName}, ${i})`);
 
-        let imgSave = document.createElement('img');
-        if (i < savedIDs.length) {
-            if (i === savedIDs[i][0] && category === savedIDs[i][1]) {
-                imgSave.setAttribute('src', 'https://www.freeiconspng.com/thumbs/check-tick-icon/tick-mark-icon-png-7.png');
-            }
-            else {
-                imgSave.setAttribute('src', 'https://static.thenounproject.com/png/3162217-200.png');
-            }
-        }
-        else {
-            imgSave.setAttribute('src', 'https://static.thenounproject.com/png/3162217-200.png');
-        }
-        imgSave.setAttribute('class', 'save');
-        imgSave.setAttribute('id', `saveB${i}${category}`)
+        let divpopup = document.createElement('div');
+        divpopup.setAttribute('class', 'divPopup');
+        let popup = document.createElement('div');
+        popup.setAttribute('class', 'popup');
+        let popSpan = document.createElement('span');
+        popSpan.setAttribute('class', 'popuptext');
+        popSpan.setAttribute('id', `myPopup${i}`);
+        popSpan.innerHTML = 'Saved';
 
-        let saveButton = document.createElement('button');
-        saveButton.setAttribute('class', 'save');
-        saveButton.setAttribute('id', 'save');
-        saveButton.setAttribute('onclick', `addToSaved(${arrayName}, ${i}, document.getElementById('saveB${i}${category}'))`);
+        let linkSave = document.createElement('a');
+        linkSave.setAttribute('class', 'saveLink');
+        linkSave.innerHTML = "<i class=\"fas fa-bookmark\"></i>";
 
-        divImgBox.appendChild(imgSave);
-        divImgBox.appendChild(saveButton);
+        linkSave.setAttribute('onclick', `addToSaved(${arrayName}, ${i})`);
+
+        let titleEl = document.createElement('h3');
+        titleEl.setAttribute('class', 'itemTitle');
+        titleEl.textContent = array[i].oName;
+
+        let divStar = document.createElement('div');
+        divStar.setAttribute('class', 'divStar');
+        divStar.innerHTML = 
+        `
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+        `;
+
+
+        popup.appendChild(popSpan);
+        divpopup.appendChild(popup);
+        divImgBox.appendChild(divStar);
+        divImgBox.appendChild(titleEl);
+        divImgBox.appendChild(divpopup);
+        divImgBox.appendChild(linkSave);
         divImgBox.appendChild(imgItem);
         divSliderBox.appendChild(divImgBox);
         divSwiperSlide.appendChild(divSliderBox);
@@ -127,6 +84,7 @@ function imagesDisplay(category, arrayName, containerName, array) {
 
 
 }
+
 function goToPage(arr, num) {
     // console.log(savedReviews.length);
     savedReviews.push(arr[num].oName);

@@ -49,28 +49,15 @@ body {
 	max-width: 100%;
 	max-height: 100%;
 }
-.img-box .save
-{
-	width: 40px;
-	height: 40px;
+.saveLink{
+	color: gold;
+	font-size: 35px;
+	z-index: 4;
 	position: absolute;
-	top: 15px;
-	right: 5px;
-	visibility: hidden;
-	background-color: #757575a4;
+	top: 20px;
+	right: 15px;
+	
 }
-.img-box img.save
-{
-	width: 40px;
-	height: 40px;
-	position: absolute;
-	top: 7px;
-	right: 5px;
-	visibility: hidden;
-	/* background-color: #75757567; */
-}
-
-
 .time {
 	position: absolute;
 	top: 0px;
@@ -107,9 +94,34 @@ body {
 .cart a {
 	color: #FFFFFF;
 }
-
+.itemTitle
+{
+	visibility: hidden;
+	width: 100%;
+	height: 60px;
+	padding-top: 60px;
+	position: absolute;
+	font-size: 30px;
+	background: linear-gradient(to top, black 50%, transparent);
+	color: #e4e4e4;
+	bottom: 10px;
+	left: 0;
+	/* transition: 1s; */
+}
+.divStar{
+	visibility: hidden;
+	color: #e4e4e4;
+	position: absolute;
+	top: 30px;
+	left: 20px;
+	/* transition: 1s; */
+}
+.checked {
+	color: orange;
+  }
 .slider-box:hover {
 	box-shadow: 2px 2px 12px rgba(47, 47, 47, 0.616);
+	cursor: pointer;
 }
 .slider-box:hover .swiper-slide {
 	background: black;
@@ -122,17 +134,21 @@ body {
 	transition: all ease 0.3s;
 	filter: blur(1px);
 }
-.slider-box:hover .img-box:hover .save{
+.slider-box:hover .saveLink{
 	z-index: 5;
 	visibility: visible;
 }
-.slider-box:hover .img-box:hover .save:hover{
-	opacity: 60%;
+.slider-box:hover .img-box:hover .saveLink:hover{
+	color: green;
 }
-.slider-box .img-box{
-	cursor: pointer;
+.slider-box:hover .img-box .itemTitle{
+	z-index: 5;
+	visibility: visible;
 }
-
+.slider-box:hover .img-box .divStar{
+	z-index: 5;
+	visibility: visible;
+}
 .cart:hover {
 	transform: scale(1.1);
 	background-color: #fe9048;
@@ -155,4 +171,81 @@ body {
 	margin: 20px;
 	font-size: 40px;
 }
+
+
+/* Popup container - can be anything you want */
+.divPopup
+{
+	position: absolute;
+	top: 36px;
+	right: 38px;
+}
+.popup {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+  }
+  
+  /* The actual popup */
+  .popup .popuptext {
+	visibility: hidden;
+	width: 80px;
+	height: 10px;
+	background-color: #555;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 8px 0;
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	left: 50%;
+	margin-left: -80px;
+  }
+  
+  /* Popup arrow */
+  .popup .popuptext::after {
+	/* content: ""; */
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #555 transparent transparent transparent;
+  }
+  
+  /* Toggle this class - hide and show the popup */
+  .popup .show {
+	visibility: visible;
+	-webkit-animation: fadeIn 2s;
+	animation: fadeIn 2s;
+	-webkit-animation: slide 1s;
+	animation: slide 1s;
+  }
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+	from {opacity: 0;} 
+	to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+	from {opacity: 0;}
+	to {opacity:1 ;}
+  }
+
+  @-webkit-keyframes slide {
+	from {width: 0;} 
+	to {width: 80;}
+  }
+  @keyframes slide {
+	from {width: 0;} 
+	to {width: 80;}
+  }
+  
 
