@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/about-us.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
     <title>About Us</title>
 </head>
 
@@ -16,49 +19,66 @@
 <body>
     <header>
 
-
         <div class="wrapper">
             <div class="search-input">
                 <input type="text" name="searchBar" id="searchBar" placeholder="search">
                 <div id="list" class="listC"></div>
             </div>
         </div>
-
+        
         <div class="sign-in">
-            <a href="sign-in.html"><img src="/img/login.png" alt="" width="50px" height="50px"></a>
-
+            <a href="sign-in.html"><img src="./img/login.png" alt="" width="40px" height="37px"></a>
+            <!-- <div class="user-info">
+                <p>Hello there!</p>
+            </div> -->
         </div>
 
         <!-- Side Bar -->
 
-        <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="index.html">Home</a>
-            <a href="saved.html">Saved Items</a>
-            <a href="about-us.html">About Us</a>
-            <a href="feedback.html">Send Feedback</a>
+        <div class="wrapper1">
+            <input type="checkbox" id="btn" hidden>
+            <label for="btn" class="menu-btn">
+             <i class="fas fa-bars"></i>
+             <i class="fas fa-times"></i>
+             </label>
+            <nav id="sidebar">
+                <div class="title">
+                    Menu
+                </div>
+                <ul class="list-items">
+                    <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+                    <li><a href="saved.html"><i class="fas fa-bookmark"></i>Saved Items</a></li>
+                    <li><a href="feedback.html"><i class="fas fa-comments"></i></i>Send Feedback</a></li>
+                    <li><a href="about-us.html"><i class="fas fa-receipt"></i>About Us</a></li>
+                </ul>
+            </nav>
+            <div class="logo">
+                <a href="index.html"><img src="https://via.placeholder.com/120x40" alt="logo"></a>
+    
+            </div>
         </div>
 
-        <span class="menubtn" onclick="openNav()">&#9776;</span>
-
-        <div class="logo">
-            <a href="index.html"><img src="https://via.placeholder.com/120x40" alt="logo"></a>
-
-        </div>
+        
     </header>
     <main>
 
         <div id="title">
-            <h1>Who are we</h1>
+            <h1>Geek Lords Team</h1>
         </div>
 
         <div id="hero">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, itaque iusto. Quae cum commodi quos ex inventore quo quaerat et repellendus! Odit incidunt itaque libero dicta. Assumenda aspernatur enim recusandae? Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Repellendus, debitis. Quisquam consectetur dolorem provident nostrum dolorum quasi at, dicta excepturi impedit corrupti tenetur saepe, porro optio sed tempore nemo sapiente.</p>
+            <p>
+                Behind every successful application is team of
+                dedicated developers, and here at 404.inc, we
+                are no different. Our team of developers and
+                programmers are not only experts in their craft, but
+                also come up with the myriad of creative ideas that
+                turn into web applications.
+            </p>
         </div>
 
         <div id="team">
-            <h2>The Team</h2>
+            <h2>Our Team Members</h2>
         </div>
         <div id="about">
             <div class="about-div">
@@ -69,11 +89,11 @@
                     <p class="full-name about">Ayham Azraq</p>
                     <p class="role about">Web Developer & Software Engineer</p>
                     <p class="description about">
-                        Hi there! Lorem ipsum dolor, sit amet consectetur adipisicing elit. In necessitatibus illum tenetur nostrum harum dolore itaque et amet.
+                        This is Ayham  (HTML, CSS Developer), his role was to provide the team with advanced ideas and implement parts of the structure and designing of the website using HTML & CSS.
                     </p>
                     <div class="social-container about">
-                        <button><i class="fab fa-github about"> <a href="https://github.com/Ayhamazraq"></a></i></button>
-                        <button><i class="fab fa-twitter about"></i></button>
+                        <a href="https://github.com/Ayhamazraq" target=”_blank”><button><i class="fab fa-github about"></i></button></a>
+                        <button><i class="fab fa-facebook about"></i></button>
                         <button><i class="fab fa-linkedin-in about"></i></button>
                     </div>
                 </div>
@@ -86,11 +106,11 @@
                     <p class="full-name about">Hussam Albadri</p>
                     <p class="role about">Web Developer & Software Engineer</p>
                     <p class="description about">
-                        Hi there! Lorem ipsum dolor, sit amet consectetur adipisicing elit. In necessitatibus illum tenetur nostrum harum dolore itaque et amet.
+                        This is Hussam (The CSS Expert), his role was to Design parts of the website and restructure some of thr HTML to fit with advanced CSS methodologies.
                     </p>
                     <div class="social-container about">
-                        <button><i class="fab fa-github about"> <a href="https://github.com/Ayhamazraq"></a></i></button>
-                        <button><i class="fab fa-twitter about"></i></button>
+                        <a href="https://github.com/HussamAlbadri" target=”_blank”><button><i class="fab fa-github about"></i></button></a>
+                        <button><i class="fab fa-facebook about"></i></button>
                         <button><i class="fab fa-linkedin-in about"></i></button>
                     </div>
                 </div>
@@ -103,11 +123,11 @@
                     <p class="full-name about">Mohamed Bader</p>
                     <p class="role about">Web Developer & Software Engineer</p>
                     <p class="description about">
-                        Hi there! Lorem ipsum dolor, sit amet consectetur adipisicing elit. In necessitatibus illum tenetur nostrum harum dolore itaque et amet.
+                        M.Bader (Team Leader, Full-Stack Developer), his responsibility was to check and work on all the website components and handle all the missed parts & errors
                     </p>
                     <div class="social-container about">
-                        <button><i class="fab fa-github about"> <a href="https://github.com/Ayhamazraq"></a></i></button>
-                        <button><i class="fab fa-twitter about"></i></button>
+                        <a href="https://github.com/mohammadbader99" target=”_blank”><button><i class="fab fa-github about"></i></button></a>
+                        <button><i class="fab fa-facebook about"></i></button>
                         <button><i class="fab fa-linkedin-in about"></i></button>
                     </div>
                 </div>
@@ -120,11 +140,11 @@
                     <p class="full-name about">Mohamed Lebzo</p>
                     <p class="role about">Web Developer & Software Engineer</p>
                     <p class="description about">
-                        Hi there! Lorem ipsum dolor, sit amet consectetur adipisicing elit. In necessitatibus illum tenetur nostrum harum dolore itaque et amet.
+                        This is M.Lebzo (Full-Stack JavaScript developer), he created and generated the website pages using JS to reduce HTML files and he created almost all the website functionalities.
                     </p>
                     <div class="social-container about">
-                        <button><i class="fab fa-github about"> <a href="https://github.com/Ayhamazraq"></a></i></button>
-                        <button><i class="fab fa-twitter about"></i></button>
+                        <a href="https://github.com/mohammadlebzo" target=”_blank”><button><i class="fab fa-github about"></i></button></a>
+                        <button><i class="fab fa-facebook about"></i></button>
                         <button><i class="fab fa-linkedin-in about"></i></button>
                     </div>
                 </div>
@@ -137,11 +157,11 @@
                     <p class="full-name about">Hamza Altamari</p>
                     <p class="role about">Web Developer & Software Engineer</p>
                     <p class="description about">
-                        Hi there! Lorem ipsum dolor, sit amet consectetur adipisicing elit. In necessitatibus illum tenetur nostrum harum dolore itaque et amet.
+                        This is Hamza (HTML, CSS Developer), he was an important developer in the team his role was to implement parts of the structure and designing of the website using HTML & CSS.
                     </p>
                     <div class="social-container">
-                        <button><i class="fab fa-github about"> <a href="https://github.com/Ayhamazraq"></a></i></button>
-                        <button><i class="fab fa-twitter about"></i></button>
+                        <a href="https://github.com/Hamzamt99" target=”_blank”><button><i class="fab fa-github about"></i></button></a>
+                        <button><i class="fab fa-facebook about"></i></button>
                         <button><i class="fab fa-linkedin-in about"></i></button>
                     </div>
                 </div>
@@ -153,7 +173,7 @@
 
                 <section class="social-media">
                     <div class="container text-center">
-                        <p>Contact Info</p>
+                        <p>Contact Us</p>
                         <div class="social-icons">
                             <a href="#"><img src="img/facebook-icon.png" /> </a>
                             <a href="#"><img src="img/instagram-icon.png" /> </a>

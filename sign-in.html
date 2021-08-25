@@ -7,9 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign in</title>
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/sign-in.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -21,9 +25,9 @@
                 <div id="list" class="listC"></div>
             </div>
         </div>
-
+        
         <div class="sign-in">
-            <a href="sign-in.html"><img src="./img/login.png" alt="" width="50px" height="50px"></a>
+            <a href="sign-in.html"><img src="./img/login.png" alt="" width="40px" height="37px"></a>
             <!-- <div class="user-info">
                 <p>Hello there!</p>
             </div> -->
@@ -31,20 +35,30 @@
 
         <!-- Side Bar -->
 
-        <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="index.html">Home</a>
-            <a href="saved.html">Saved Items</a>
-            <a href="about-us.html">About Us</a>
-            <a href="feedback.html">Send Feedback</a>
+        <div class="wrapper1">
+            <input type="checkbox" id="btn" hidden>
+            <label for="btn" class="menu-btn">
+             <i class="fas fa-bars"></i>
+             <i class="fas fa-times"></i>
+             </label>
+            <nav id="sidebar">
+                <div class="title">
+                    Menu
+                </div>
+                <ul class="list-items">
+                    <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+                    <li><a href="saved.html"><i class="fas fa-bookmark"></i>Saved Items</a></li>
+                    <li><a href="feedback.html"><i class="fas fa-comments"></i></i>Send Feedback</a></li>
+                    <li><a href="about-us.html"><i class="fas fa-receipt"></i>About Us</a></li>
+                </ul>
+            </nav>
+            <div class="logo">
+                <a href="index.html"><img src="https://via.placeholder.com/120x40" alt="logo"></a>
+    
+            </div>
         </div>
 
-        <span class="menubtn" onclick="openNav()">&#9776;</span>
-
-        <div class="logo">
-            <a href="index.html"><img src="https://via.placeholder.com/120x40" alt="logo"></a>
-
-        </div>
+        
     </header>
     <main>
         <div id="main">
@@ -111,7 +125,7 @@
 
             <section class="social-media">
                 <div class="container text-center">
-                    <p>Contact Info</p>
+                    <p>Contact Us</p>
                     <div class="social-icons">
                         <a href="#"><img src="img/facebook-icon.png" /> </a>
                         <a href="#"><img src="img/instagram-icon.png" /> </a>

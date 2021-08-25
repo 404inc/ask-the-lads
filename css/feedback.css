@@ -40,7 +40,7 @@
 .screen-body-item.left {
   display: flex;
   flex-direction: column;
-  background-color: #29648a;
+  background-color: #5a5560;
   border-radius: 15px 0 0 15px;
 }
  
@@ -62,7 +62,8 @@
   background: white;
 }
  
-.formLogo img {
+.formLogo p {
+  font-size: 40px;
   margin: 150px 0 0 -15px;
   width: 180px;
   height: 60px;
@@ -82,7 +83,6 @@
 }
  
 .app-form-control {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   width: 100%;
   padding: 10px 0;
   background: none;
@@ -95,12 +95,10 @@
 }
  
 .app-form-control::placeholder {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: #AAABB8;
 }
  
 label {
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: #AAABB8;
 }
  
@@ -110,8 +108,8 @@ label {
  
 .app-form-button {
   border-radius: 20px;
-  border: 1px solid #29648a;
-  background-color: #29648a;
+  border: 1px solid #5a5560;
+  background-color: #5a5560;
   color: #FFFFFF;
   font-size: 12px;
   font-weight: bold;
@@ -123,8 +121,8 @@ label {
 }
  
 .app-form-button:hover {
-  border: 1px solid #2E9CCA;
-  background-color: #2E9CCA;
+  border: 1px solid #9b786f;
+  background-color: #9b786f;
    transition: 250ms ease-in;
 }
  

@@ -9,26 +9,25 @@
     padding: 10px 35px;
     font-size: 50px;
     border-radius: 10px;
-    background-color: #464866;
+    background-color: #5a5560;
     color: white;
 }
 
 #hero {
-    width: 1280px;
-    height: 350px;
+    width: 1000px;
+    height: 230px;
     margin: auto;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     border-radius: 15px;
-    background-image: url(https://live.staticflickr.com/7368/26944418810_1c420df3e3_b.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
+    background: linear-gradient(to right, #5a5560, #9b786f, #5a5560);
 }
 
 #hero p {
-    font-size: 20px;
+    font-size: 25px;
+    line-height: 35px;
     color: white;
     text-align: center;
-    padding: 100px 30px;
+    padding: 50px 30px;
 }
 
 #team {
@@ -41,19 +40,18 @@
     padding: 10px 35px;
     font-size: 40px;
     border-radius: 10px;
-    background-color: #464866;
+    background-color: #5a5560;
     color: white;
     margin-bottom: 30px;
 }
 
 * .about {
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .container1 {
     position: relative;
-    background-color: #29648A;
+    background-color: #5a5560;
     width: 192px;
     height: 190px;
     padding: 10px;
@@ -95,7 +93,7 @@
     letter-spacing: 1px;
     margin-top: 40px;
     margin-bottom: 16px;
-    color: #ffbe44;
+    color: #faed26;
 }
 
 .role,
@@ -111,7 +109,7 @@
     text-transform: uppercase;
     padding-bottom: 8px;
     margin-bottom: 24px;
-    border-bottom: 2px solid #ffbe44;
+    border-bottom: 2px solid #faed26;
 }
 
 .social-container {

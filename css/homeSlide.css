@@ -9,7 +9,6 @@ html, body {
 body {
 	margin: 0px;
 	padding: 0px;
-	font-family: montserrat, sans-serif;
 	/* background-color: #25274D; */
 }
 
@@ -155,6 +154,5 @@ body {
 	color: #FFFFFF;
 	margin: 20px;
 	font-size: 30px;
-	font-family: calibri;
 }
 
