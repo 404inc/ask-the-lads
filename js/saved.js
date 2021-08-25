@@ -22,7 +22,7 @@ function displayer()
     for (let i = 0; i < tempArray.length; i++) {
         let liEl = document.createElement('li');
         let linkEl = document.createElement('a');
-        linkEl.setAttribute('href', tempArray[i][2]);
+        linkEl.setAttribute('onclick', `searchForThePage('${tempArray[i][0]}')`);
         linkEl.textContent = tempArray[i][0];
 
         let img = document.createElement('img');
