@@ -89,7 +89,7 @@ function goToPage(arr, num) {
     // console.log(savedReviews.length);
     savedReviews.push(arr[num].oName);
     let tempArray = arr[num];
-    window.open(arr[num].oLink, '_blank');
+    window.open(arr[num].oLink, '_self');
     saveToLocalStorage(tempArray, 'load-review');
 
 }

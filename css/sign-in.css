@@ -4,6 +4,10 @@
     margin-bottom: 170px;
 }
 
+body {
+    background: linear-gradient(to bottom, #5a5560, #46344e, #5a5560, #9d8d8f, #9b785f);
+  }
+
 .h1 {
     font-size: 50px;
     font-weight: bold;

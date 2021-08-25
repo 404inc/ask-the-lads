@@ -28,13 +28,15 @@ let savedReviews = [];
 
 let savedIDs = [];
 
-let messages = 
+let messages =
 [
-    'The Golden Order has been broken. Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between. \nIn the Lands Between ruled by Queen Marika the Eternal, the Elden Ring, the source of the Erdtree, has been shattered.Marika\'s offspring, demigods all, claimed the shards of the Elden Ring known as the Great Runes, and the mad taint of their newfound strength triggered a war: The Shattering. \nA war that meant abandonment by the Greater Will. \nAnd now the guidance of grace will be brought to the Tarnished who were spurned by the grace of gold and exiled from the Lands Between. \nYe dead who yet live, your grace long lost, follow the path to the Lands Between beyond the foggy sea to stand before the Elden Ring. \nAnd become the Elden Lord.', 
-    ''
-]
+    'The narrative follows the young ninjas Naruto Uzumaki and Sasuke Uchiha as they participate in a world war between shinobi – the Fourth Shinobi World War – against the terrorist organization Akatsuki and unite to defeat it. Similar to Storm 3, the game uses regular fighting systems; however, players can switch among a team of three fighters who can assist each other. Other returning elements involve boss fights, where quick time events are required to reach hidden scenes and hack and slash areas. ',
+    'The Golden Order has been broken. Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between. \nIn the Lands Between ruled by Queen Marika the Eternal, the Elden Ring, the source of the Erdtree, has been shattered.Marika\'s offspring, demigods all, claimed the shards of the Elden Ring known as the Great Runes, and the mad taint of their newfound strength triggered a war: The Shattering. \nA war that meant abandonment by the Greater Will. \nAnd now the guidance of grace will be brought to the Tarnished who were spurned by the grace of gold and exiled from the Lands Between. \nYe dead who yet live, your grace long lost, follow the path to the Lands Between beyond the foggy sea to stand before the Elden Ring. \nAnd become the Elden Lord.',
+    'Dark Souls III is an action role-playing game played in a third-person perspective, similar to previous games in the series. According to lead director and series creator Hidetaka Miyazaki, the game\'s gameplay design followed "closely from Dark Souls II". Players are equipped with various weapons to fight against enemies, such as bows, throwable projectiles, and swords. Shields can act as secondary weapons, but they are mainly used to deflect enemies\' attacks and protect the player from suffering damage.',
+    'Red Dead Redemption 2 (stylized as Red Dead Redemption II) is a western-themed action-adventure video game developed and published by Rockstar Games. It is the third entry in the Red Dead series and a prequel to 2010\'s Red Dead Redemption and was released on October 26th, 2018 on PlayStation 4, Xbox One and on November 5th, 2019 for PC. Set in a fictional recreation of the American Old West in 1899, Red Dead Redemption 2 focuses on the life of Arthur Morgan and his position in the notorious Van der Linde gang. The game follows the gang\'s decline as they are pursued by lawmen, fellow gangs and Pinkerton agents. The narrative revolves around the characters of Dutch van der Linde, John Marston and Micah Bell in addition to Morgan.'
+];
 
-let trailers = 
+let trailers =
 [
     'https://www.youtube.com/watch?v=SeBnDAD7mHE',
     'https://www.youtube.com/watch?v=E3Huy2cdih0',
@@ -118,10 +120,10 @@ function Objects(oName, oDis, oImage, oHero, category, trailer) {
 }
 
 //// Name, description, image path, hero path, category.
-new Objects('NARUTO SHIPPUDEN: Ultimate Ninja STORM 4', 'Whatever', './img/narutoStorm4.png', '../img/stormHero.png', 'games', trailers[0]);
-new Objects('ELDEN RING', messages[0], './img/eldenring.jpg', '../img/eldenhero.png', 'games', trailers[1]);
-new Objects('Dark Souls 3', 'Whatever', './img/Dark-Souls.jpg', '../img/darksouls3Hero.jpg', 'games', trailers[2]);
-new Objects('Red Dead Redemption 2', 'Whatever', './img/reddeadredemption2.jpg', '../img/rd2Hero.jpg', 'games', trailers[3]);
+new Objects('NARUTO SHIPPUDEN: Ultimate Ninja STORM 4', messages[0], './img/narutoStorm4.png', '../img/stormHero.jpg', 'games', trailers[0]);
+new Objects('ELDEN RING', messages[1], './img/eldenring.jpg', '../img/eldenhero.jpg', 'games', trailers[1]);
+new Objects('Dark Souls 3', messages[2], './img/Dark-Souls.jpg', '../img/darksouls3Hero.jpg', 'games', trailers[2]);
+new Objects('Red Dead Redemption 2', messages[3], './img/reddeadredemption2.jpg', '../img/redDeadHero.jpg', 'games', trailers[3]);
 new Objects('Uncharted 4: A Thiefs End', 'Whatever', './img/unch4.jpg', 'https://api.cdkeybay.com/static/df2513b402450510ce7c7357.jpg', 'games', trailers[4]);
 new Objects('Call of Duty: Modern Warfare', 'Whatever', './img/modernwarfare19.jpg', 'https://cdn.mos.cms.futurecdn.net/ZbXQ28h5XuqBss7sGnVFsm.jpg', 'games', trailers[5]);
 new Objects('Bloodborne', 'Whatever', './img/bloodborne.jpg', 'https://d2skuhm0vrry40.cloudfront.net/2013/articles/1/7/3/9/5/6/5/bloodborne-walkthrough-and-game-guide-3689-1427363367691.jpg/EG11/resize/1200x-1/bloodborne-walkthrough-and-game-guide-3689-1427363367691.jpg', 'games', trailers[6]);

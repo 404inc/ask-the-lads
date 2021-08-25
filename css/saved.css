@@ -4,6 +4,10 @@ main {
     height: 90vh;
 }
 
+body {
+    background: linear-gradient(to bottom, #5a5560, #46344e, #5a5560, #9d8d8f, #9b785f);
+}
+
 .left-vbar {
     width: 270px;
     height: 100%;
