@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 let homeLoadArr = [];
 
 function readFromLocalStorage() {
@@ -11,7 +11,7 @@ function readFromLocalStorage() {
             savedReviews.push(saveArray[i][0]);
             let temp = [saveArray[i][3], saveArray[i][4]]
             savedIDs[i] = temp;
-            
+
         }
     }
 
@@ -47,7 +47,7 @@ function imagesDisplay(category, arrayName, containerName, array) {
 
         let linkSave = document.createElement('a');
         linkSave.setAttribute('class', 'saveLink');
-        linkSave.innerHTML = "<i class=\"fas fa-bookmark\"></i>";
+        linkSave.innerHTML = '<i class="fas fa-bookmark"></i>';
 
         linkSave.setAttribute('onclick', `addToSaved(${arrayName}, ${i})`);
 
@@ -57,7 +57,7 @@ function imagesDisplay(category, arrayName, containerName, array) {
 
         let divStar = document.createElement('div');
         divStar.setAttribute('class', 'divStar');
-        divStar.innerHTML = 
+        divStar.innerHTML =
         `
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>

@@ -46,7 +46,7 @@ function imagesDisplay(category, arrayName, containerName, array) {
     popSpan.innerHTML = 'Saved';
     var linkSave = document.createElement('a');
     linkSave.setAttribute('class', 'saveLink');
-    linkSave.innerHTML = "<i class=\"fas fa-bookmark\"></i>";
+    linkSave.innerHTML = '<i class="fas fa-bookmark"></i>';
     linkSave.setAttribute('onclick', "addToSaved(".concat(arrayName, ", ").concat(i, ")"));
     var titleEl = document.createElement('h3');
     titleEl.setAttribute('class', 'itemTitle');

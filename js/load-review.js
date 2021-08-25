@@ -19,20 +19,21 @@ function readFromInfoLocalStorage()
     {
         tempArray = normalObj;
     }
-}
-readFromInfoLocalStorage();
 
-function readFromCommentLocalStorage() 
-{
-    let stringObj = localStorage.getItem('load-comment');
-    let normalObj = JSON.parse(stringObj);
+    if (tempArray.oName === 'ELDEN RING') {
+        let pEl = document.createElement('p');
+        pEl.textContent = 'I doubt you could even imagine it';
+        commentsField.appendChild(pEl);
+    }
 
-    if (normalObj) 
-    {
-        comments = normalObj;
+    for (let i = 0; i < tempArray.commentsA.length; i++) {
+        let pEl = document.createElement('p');
+        pEl.textContent = tempArray.commentsA[i];
+        commentsField.appendChild(pEl);
+        
     }
 }
-readFromCommentLocalStorage();
+readFromInfoLocalStorage();
 
 function displayer()
 {
@@ -74,12 +75,16 @@ function comment(event)
 {
     event.preventDefault();
     let text = event.target.textareaEl.value;
-    comments.push(text);
     let pEl = document.createElement('p');
     pEl.textContent = text;
+    let sendArrayName = `${tempArray.category}Row`;
+    tempArray.commentsA.push(text);
+
+    displayComments(sendArrayName)
+
     commentsField.appendChild(pEl);
     inputForm.reset();
-    saveToLocalStorage(comments, 'load-comment');
+    saveToLocalStorage(tempArray, 'load-review');
 }
 
 function displayComments(){
@@ -92,5 +97,35 @@ function displayComments(){
         }
     }
 }
+
+function commentLocation(name)
+{
+    if (name === 'gamesRaw') 
+    {
+        for (let i = 0; i < gamesRaw.length; i++) {
+            if (tempArray.oName === gamesRaw[i].oName) {
+                gamesRaw[i].commentsA = tempArray.commentsA;
+            }
+        }
+    }
+    if (name === 'moviesRaw') 
+    {
+        for (let i = 0; i < moviesRaw.length; i++) {
+            if (tempArray.oName === moviesRaw[i].oName) {
+                moviesRaw[i].commentsA = tempArray.commentsA;
+            }
+        }
+    }
+    if (name === 'animeRaw') 
+    {
+        for (let i = 0; i < animeRaw.length; i++) {
+            if (tempArray.oName === animeRaw[i].oName) {
+                animeRaw[i].commentsA = tempArray.commentsA;
+            }
+        }
+    }
+    
+}
+
 displayComments();
 
