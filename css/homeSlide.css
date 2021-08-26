@@ -1,0 +1,251 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body {
+	position: relative;
+	height: 100%;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	/* background-color: #25274D; */
+}
+
+.swiper-slide {
+	width: 250px !important;
+}
+
+.slider-box {
+	margin: 20px;
+	height: 350px;
+	width: 250px;
+	position: relative;
+	background-color: #FFFFFF;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	border: 1px solid rgba(187, 187, 187, 0.40);
+	overflow: hidden;
+}
+
+.slider-box a {
+	text-decoration: none;
+	text-align: center;
+}
+
+.img-box {
+	height: 375px;
+	position: relative;
+}
+
+.img-box img {
+	
+	margin-top: 10px;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+.saveLink{
+	color: gold;
+	font-size: 35px;
+	z-index: 4;
+	position: absolute;
+	top: 20px;
+	right: 15px;
+	
+}
+.time {
+	position: absolute;
+	top: 0px;
+	right: 20px;
+	color: #f16007;
+}
+
+.detail {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-sizing: border-box;
+	font-size: 13px;
+	line-height: 35px;
+}
+
+.price {
+	color: black;
+	/* background-color: #ff555b; */
+	line-height: 20px;
+}
+
+.cart {
+	position: absolute;
+	bottom: 0px;
+	height: 45px;
+	background-color: #8069ff;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.cart a {
+	color: #FFFFFF;
+}
+.itemTitle
+{
+	visibility: hidden;
+	width: 100%;
+	height: 60px;
+	padding-top: 60px;
+	position: absolute;
+	font-size: 30px;
+	background: linear-gradient(to top, black 50%, transparent);
+	color: #e4e4e4;
+	bottom: 10px;
+	left: 0;
+	/* transition: 1s; */
+}
+.divStar{
+	visibility: hidden;
+	color: #e4e4e4;
+	position: absolute;
+	top: 30px;
+	left: 20px;
+	/* transition: 1s; */
+}
+.checked {
+	color: orange;
+  }
+.slider-box:hover {
+	box-shadow: 2px 2px 12px rgba(47, 47, 47, 0.616);
+	cursor: pointer;
+}
+.slider-box:hover .swiper-slide {
+	background: black;
+	position: absolute;
+}
+
+.slider-box:hover .img-box img {
+	transform: scale(1.05);
+	/* transform: rotate(-1deg); */
+	transition: all ease 0.3s;
+	filter: blur(1px);
+}
+.slider-box:hover .saveLink{
+	z-index: 5;
+	visibility: visible;
+}
+.slider-box:hover .img-box:hover .saveLink:hover{
+	color: green;
+}
+.slider-box:hover .img-box .itemTitle{
+	z-index: 5;
+	visibility: visible;
+}
+.slider-box:hover .img-box .divStar{
+	z-index: 5;
+	visibility: visible;
+}
+.cart:hover {
+	transform: scale(1.1);
+	background-color: #fe9048;
+	box-shadow: 2px 2px 12px rgba(47, 47, 47, 0.40);
+	transition: all ease 0.1s;
+}
+
+.heading {
+	display: flex;
+	justify-content: center;
+}
+
+.heading h1 {
+	border-left: 2px solid #000000;
+	Border-right: 2px solid #000000;
+	background-color: #f05656;
+	text-shadow: 2px 2px 12px rgba(69, 66, 66, 0.3);
+	padding: 0px 10px;
+	color: #FFFFFF;
+	margin: 20px;
+	font-size: 40px;
+}
+
+
+/* Popup container - can be anything you want */
+.divPopup
+{
+	position: absolute;
+	top: 36px;
+	right: 38px;
+}
+.popup {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+  }
+  
+  /* The actual popup */
+  .popup .popuptext {
+	visibility: hidden;
+	width: 80px;
+	height: 10px;
+	background-color: #555;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 8px 0;
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	left: 50%;
+	margin-left: -80px;
+  }
+  
+  /* Popup arrow */
+  .popup .popuptext::after {
+	/* content: ""; */
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #555 transparent transparent transparent;
+  }
+  
+  /* Toggle this class - hide and show the popup */
+  .popup .show {
+	visibility: visible;
+	-webkit-animation: fadeIn 2s;
+	animation: fadeIn 2s;
+	-webkit-animation: slide 1s;
+	animation: slide 1s;
+  }
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+	from {opacity: 0;} 
+	to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+	from {opacity: 0;}
+	to {opacity:1 ;}
+  }
+
+  @-webkit-keyframes slide {
+	from {width: 0;} 
+	to {width: 80;}
+  }
+  @keyframes slide {
+	from {width: 0;} 
+	to {width: 80;}
+  }
+  
+

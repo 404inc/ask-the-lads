@@ -1,0 +1,90 @@
+
+
+main {
+    height: 90vh;
+}
+
+body {
+    background: linear-gradient(to bottom, #5a5560, #46344e, #5a5560, #9d8d8f, #9b785f);
+}
+
+.left-vbar {
+    width: 270px;
+    height: 100%;
+    background-color: #5a5560;
+    color: #fff;
+    border-right: 2px solid black;
+    float: left;
+}
+
+.output {
+    height: 90%;
+    margin-top: 30px;
+    margin-left: 30px;
+    /* line-height: 40px; */
+    width: 70%;
+    float: left;
+    overflow: scroll;
+}
+
+.output::-webkit-scrollbar {
+    display: none;
+}
+
+.output li {
+    height: 230px;
+    width: 500px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+    display: inline-block;
+    line-height: 50px;
+    border: 2px solid white;
+    background-color: #5a5560;
+    font-size: 35px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.output li a {
+    margin-left: 30px;
+    margin-top: 80px;
+    position: absolute;
+    color: white;
+}
+
+h3 {
+    font-size: 40px;
+    margin: 200px 0 0 30px;
+}
+
+.delButtonJs {
+    height: 50px;
+    width: 50px;
+    font-size: 25px;
+    color: #fff;
+    border: 1px solid white;
+    border-radius: 5px;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    background-color: transparent;
+    visibility: hidden;
+}
+
+li:hover .delButtonJs {
+    visibility: visible;
+}
+
+li:hover .delButtonJs:hover {
+    background-color: red;
+}
+
+.output li img {
+    margin-top: 8px;
+    height: 200px;
+    width: 140px;
+    margin-left: 10px;
+    border-radius: 5px;
+    border: 2px solid white;
+    box-shadow: black 0 10px 10px 0;
+}

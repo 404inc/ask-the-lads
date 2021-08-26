@@ -1,0 +1,304 @@
+/* @import url(https://fonts.googleapis.com/css?family=Lato:400,300,700); */
+ 
+
+ :root{
+    --h: '';
+}
+
+ .movie-card {
+	 font: 14px/22px "Lato", Arial, sans-serif;
+	 color: #9d8d8f;
+}
+ .containerLoad {
+     position: relative;
+	 width: 100%;
+	 height: 1000px;
+	 background: linear-gradient(to bottom, #46344e, #5a5560, #9d8d8f, #9b785f);
+	 border-radius: 5px;
+}
+ .hero {
+	 height: 400px;
+	 margin: 0;
+	 position: relative;
+	 overflow: hidden;
+	 z-index: 1;
+	 border-top-left-radius: 5px;
+	 border-top-right-radius: 5px;
+}
+ .hero:before {
+	 content: '';
+	 width: 100%;
+	 height: 100%;
+	 position: absolute;
+	 overflow: hidden;
+	 top: 0;
+	 left: 0;
+	 background: red;
+	 background: var(--h);
+	 background-repeat: no-repeat;
+     background-size: cover;
+     z-index: -1;
+	 transform: skewY(-2.2deg);
+	 transform-origin: 0 0;
+}
+ .cover {
+	 position: absolute;
+	 top: 160px;
+	 left: 40px;
+	 z-index: 2;
+     width: 187px;
+     height: 282px;
+}
+ .details {
+	 padding: 190px 0 0 280px;
+}
+ .details .title1 {
+	 color: white;
+	 font-size: 44px;
+	 margin-bottom: 13px;
+	 position: relative;
+}
+ .details .title1 span {
+	 position: absolute;
+	 top: 3px;
+	 margin-left: 12px;
+	 background: #c4af3d;
+	 border-radius: 5px;
+	 color: #544c21;
+	 font-size: 14px;
+	 padding: 0px 4px;
+}
+ .details .title2 {
+	 color: rgb(255, 255, 255);
+	 font-size: 23px;
+	 font-weight: 300;
+	 margin-bottom: 15px;
+}
+ .details .likes {
+	 color: white;
+	 margin-left: 24px;
+}
+ .details .likes:before {
+	 content: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/icon_like.png");
+	 position: relative;
+	 top: 2px;
+	 padding-right: 7px;
+}
+ .description {
+	 bottom: 0px;
+	 height: 200px;
+	 font-size: 16px;
+	 line-height: 26px;
+	 color: #ffffff;
+}
+
+ .tag {
+	 background: rgb(80, 80, 80);
+	 border-radius: 10px;
+	 padding: 3px 8px;
+	 font-size: 14px;
+	 margin-right: 4px;
+	 line-height: 35px;
+	 cursor: pointer;
+}
+ .tag:hover {
+	 background: #ddd;
+}
+ .column2 {
+	 padding-left: 41px;
+	 padding-top: 30px;
+	 margin-left: 250px;
+	 width: 480px;
+	 float: left;
+	 font-size: 25px;
+}
+.column2 p{
+    height: 300px;
+    width: 700px;
+    margin-bottom: 30px;
+	margin-right: 20px;
+	font-size: 20px;
+}
+ .avatars {
+	 margin-top: 23px;
+}
+ .avatars img {
+	 cursor: pointer;
+}
+ .avatars img:hover {
+	 opacity: 0.6;
+}
+ .avatars a:hover {
+	 text-decoration: none;
+}
+ fieldset, label {
+	 margin: 0;
+	 padding: 0;
+}
+/****** Style Star Rating Widget *****/
+ .rating {
+	 border: none;
+	 float: left;
+}
+ .rating > input {
+	 display: none;
+}
+ .rating > label:before {
+	 margin: 5px;
+	 margin-top: 0;
+	 font-size: 1em;
+	 font-family: FontAwesome;
+	 display: inline-block;
+	 content: "\f005";
+}
+ .rating > .half:before {
+	 content: "\f089";
+	 position: absolute;
+}
+ .rating > label {
+	 color: #ddd;
+	 float: right;
+}
+/***** CSS Magic to Highlight Stars on Hover *****/
+ .rating > input:checked ~ label, .rating:not(:checked) > label:hover, .rating:not(:checked) > label:hover ~ label {
+	/* show gold star when clicked */
+	/* hover current star */
+	 color: #ffd700;
+}
+/* hover previous stars in list */
+ .rating > input:checked + label:hover, .rating > input:checked ~ label:hover, .rating > label:hover ~ input:checked ~ label, .rating > input:checked ~ label:hover ~ label {
+	/* hover current star when changing rating */
+	/* lighten current selection */
+	 color: #ffed85;
+}
+ a[data-tooltip] {
+	 position: relative;
+}
+ a[data-tooltip]::before, a[data-tooltip]::after {
+	 position: absolute;
+	 display: none;
+	 opacity: 0.85;
+}
+ a[data-tooltip]::before {
+	/* * using data-tooltip instead of title so we * don't have the real tooltip overlapping */
+	 content: attr(data-tooltip);
+	 background: #000;
+	 color: #fff;
+	 font-size: 13px;
+	 padding: 5px;
+	 border-radius: 5px;
+	/* we don't want the text to wrap */
+	 white-space: nowrap;
+	 text-decoration: none;
+}
+ a[data-tooltip]::after {
+	 width: 0;
+	 height: 0;
+	 border: 6px solid transparent;
+	 content: '';
+}
+ a[data-tooltip]:hover::before, a[data-tooltip]:hover::after {
+	 display: block;
+}
+/** positioning **/
+/* top tooltip */
+ a[data-tooltip][data-placement="top"]::before {
+	 bottom: 100%;
+	 left: 0;
+	 margin-bottom: 40px;
+}
+ a[data-tooltip][data-placement="top"]::after {
+	 border-top-color: #000;
+	 border-bottom: none;
+	 bottom: 50px;
+	 left: 20px;
+	 margin-bottom: 4px;
+}
+.inputForm{
+    position: relative;
+    clear: both;
+    margin-left: 250px;
+}
+
+.inputForm .textareaEl
+{
+    width: 500px;
+    height: 70px;
+    overflow: scroll;
+    border-radius: 10px;
+	background: linear-gradient(to bottom, #9d8d8f, #5a5560);
+	border: 2px solid white;
+	color: white;
+	padding: 5px 0 0 5px;
+}
+
+.textareaEl::placeholder {
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.textareaEl::-webkit-scrollbar
+{
+    display: none;
+}
+.inputForm .submitF{
+    background-color: rgb(46, 46, 245);
+    width: 100px;
+    height: 30px;
+    color: rgba(255, 255, 255, 0.575);
+}
+.inputForm .submitF:hover{
+    opacity: 60%;
+}
+
+.inputForm #submit {
+	border: none;
+	background-color: #46344e;
+	color: white;
+	padding: 5px 10px;
+	border: 1px solid white;
+	border-radius: 5px;
+	margin: 5px 0 0 10px;
+}
+
+.inputForm #submit:hover {
+	background-color: #9d8d8f;
+	transition: 200ms ease-in;
+}
+
+.commentsField
+{
+    position: absolute;
+	top: 50%;
+	right: 200px;
+}
+.commentsField p{
+	background: rgba(245, 245, 245, 0.445);
+	margin-bottom: 10px;
+	width: 500px;
+	color: white;
+	padding: 10px;
+	border-radius: 10px;
+}
+.checked 
+{
+	color: orange;
+}
+.trailerButton{
+	width: 400;
+
+}
+.coverPlay{
+	/* color: black; */
+	position: absolute;
+	 top: 250px;
+	 left: 80px;
+	 z-index: 2;
+     width: 100px;
+     height: 100px;
+	 opacity: 90%;
+	 cursor: pointer;
+}
+
+.coverPlay:hover{
+	opacity: 100%;
+}

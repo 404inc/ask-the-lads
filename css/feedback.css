@@ -1,0 +1,147 @@
+.background {
+  display: flex;
+  min-height: 80vh;
+}
+
+body {
+  background: linear-gradient(to bottom, #5a5560, #46344e, #5a5560, #9d8d8f, #9b785f);
+}
+ 
+.container {
+  margin: auto;
+}
+ 
+.screen {
+  position: relative;
+  color: white;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  width: 1000px;
+}
+ 
+.screen:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+  z-index: -1;
+}
+ 
+.screen-body {
+  display: flex;
+}
+ 
+.screen-body-item {
+  flex: 1;
+  padding: 50px;
+}
+ 
+.screen-body-item.left {
+  display: flex;
+  flex-direction: column;
+  background-color: #5a5560;
+  border-radius: 15px 0 0 15px;
+}
+ 
+.app-title {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-size: 50px;
+}
+ 
+.app-title:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 25px;
+  height: 4px;
+  background: white;
+}
+ 
+.formLogo p {
+  font-size: 40px;
+  margin: 150px 0 0 -15px;
+  width: 180px;
+  height: 60px;
+}
+ 
+.app-form-group {
+  margin-bottom: 15px;
+}
+ 
+.app-form-group.message {
+  margin-top: 40px;
+}
+ 
+.app-form-group.buttons {
+  margin-bottom: 0;
+  text-align: right;
+}
+ 
+.app-form-control {
+  width: 100%;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #AAABB8;
+  color: #000;
+  font-size: 24px;
+  outline: none;
+  transition: border-color .2s;
+}
+ 
+.app-form-control::placeholder {
+  color: #AAABB8;
+}
+ 
+label {
+  color: #AAABB8;
+  font-size: 28px;
+}
+ 
+.app-form-control:focus {
+  border-bottom-color: #000;
+}
+ 
+.app-form-button {
+  border-radius: 20px;
+  border: 1px solid #5a5560;
+  background-color: #5a5560;
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 4px;
+}
+ 
+.app-form-button:hover {
+  border: 1px solid #9b786f;
+  background-color: #9b786f;
+   transition: 250ms ease-in;
+}
+ 
+.box select {
+  color: #000;
+}
+ 
+.box select option {
+  background-color: #ddd;
+  color: #000;
+}
+ 
+#app-message {
+  color: white;
+  font-size: 40px;
+  margin-top: 150px;
+}

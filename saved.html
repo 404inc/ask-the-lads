@@ -5,20 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved Reviews</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/homePage.css">
-    <link rel="stylesheet" href="css/swiper.min.css" />
-    <link rel="stylesheet" href="css/homeSlide.css" />
+    <link rel="stylesheet" href="css/saved.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
-
-    <title>Home Page</title>
 </head>
 
 <body>
@@ -66,56 +60,11 @@
 
     </header>
     <main>
-        <!-- Hero Slider -->
-        <div class="hero">
-            <div class="slideshows">
-                <div class="slideshow slideshow--hero">
-                    <div class="slides">
-                        <div class="slide slide1"></div>
-                        <div class="slide slide2"></div>
-                        <div class="slide slide3"></div>
-                    </div>
-                </div>
-                <div class="slideshow slideshow--contrast slideshow--contrast--before">
-                    <div class="slides">
-                        <div class="slide slide1"></div>
-                        <div class="slide slide2"></div>
-                        <div class="slide slide3"></div>
-
-                    </div>
-                </div>
-                <div class="slideshow slideshow--contrast slideshow--contrast--after">
-                    <div class="slides">
-                        <div class="slide slide1"></div>
-                        <div class="slide slide2"></div>
-                        <div class="slide slide3"></div>
-
-                    </div>
-                </div>
-            </div>
+        <div class="left-vbar">
+            <h3>Saved Reviews:</h3>
         </div>
-
-        <div id="bodyText">
-            <h1>Welcome to <span>Ask The Lads</span></h1>
-            <p>If you are looking for real people reviews, <span>YOU ARE IN THE RIGHT PLACE!!</span></p>
-            <p>You can choose what ever you want from the categories below to see reviews about the items in it.</p>
-            <p>And not just this!! you can also add your own review and comment to share your openion.</p>
-        </div>
-
-        <h3 class="category">Latest Games Reviews</h3>
-        <hr>
-        <div id="gamesRow" class="categoryRow"></div>
-
-        <h3 class="category">Latest Movies Reviews</h3>
-        <hr>
-        <div id="moviesRow" class="categoryRow"></div>
-
-        <h3 class="category">Latest Anime Reviews</h3>
-        <hr>
-        <div id="animeRow" class="categoryRow"></div>
-
+        <div id="output" class="output"></div>
     </main>
-
     <footer>
         <img class="footer-img" src="./img/logo.png" alt="logo" width="210px" height="70px">
         <div class="basr-social-share social">
@@ -159,16 +108,7 @@
         </div>
     </footer>
     <script src="js/app.js"></script>
-    <script src="js/Home.js"></script>
-    <script type="text/javascript" src="js/swiper.min.js"></script>
-    <script src="js/swiper.js"></script>
-    <script>
-        window.addEventListener('scroll', function() {
-            let header = document.querySelector('header');
-            let windowPosition = window.scrollY > 1;
-            header.classList.toggle('scrolling-active', windowPosition);
-        })
-    </script>
+    <script src="js/saved.js"></script>
 </body>
 
 </html>
